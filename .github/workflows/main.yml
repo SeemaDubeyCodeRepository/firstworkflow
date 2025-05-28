@@ -1,0 +1,25 @@
+name: Echo Demo
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  echo-job:
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - name: Print start message
+        run: echo "🚀 Starting the workflow..."
+
+      - name: Show current date and time
+        run: echo "🕒 Current date: $(date)"
+
+      - name: Print environment info
+        run: |
+          echo "🖥️ Running on:"
+          uname -a
+
+      - name: Print end message
+        run: echo "✅ Workflow completed!"
