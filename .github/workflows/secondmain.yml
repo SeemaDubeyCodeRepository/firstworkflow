@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Step 1
-        run: echo "✅ Job 1: Build complete"
+        run: echo "workflow1"
 
   job2:
     name: Second Job (depends on Job 1)
@@ -18,7 +18,7 @@ jobs:
     needs: job1
     steps:
       - name: Step 2
-        run: echo "🔁 Job 2: Tests running after build"
+        run: echo "workflow2"
 
   job3:
     name: Third Job (depends on Job 2)
@@ -26,4 +26,4 @@ jobs:
     needs: job2
     steps:
       - name: Step 3
-        run: echo "🚀 Job 3: Deploying after successful tests"
+        run: echo "workflow3"
