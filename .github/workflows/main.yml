@@ -13,9 +13,6 @@ jobs:
       - name: Print start message
         run: echo "🚀 Starting the workflow..."
 
-      - name: Show current date and time
-        run: echo "🕒 Current date: $(date)"
-
       - name: Print environment info
         run: |
           echo "🖥️ Running on:"
