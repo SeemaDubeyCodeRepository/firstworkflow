@@ -1,13 +1,1 @@
-name: Every 2 Minutes Cron Job
 
-on:
-  schedule:
-    - cron: '*/2 * * * *'  # Every 2 minutes
-
-jobs:
-  run-every-2-min:
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Print current time
-        run: echo "Running every 2 minutes at $(date)"
